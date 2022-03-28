@@ -83,6 +83,12 @@ class NetworkDriver(object):
         if netmiko_optional_args is None:
             netmiko_optional_args = {}
         try:
+            print(f"device_type: {device_type}")
+            print(f"netmiko_optional_args: {netmiko_optional_args}")
+            print(f"self.hostname: {self.hostname}")
+            print(f"self.username: {self.username}")
+            print(f"self.password: {self.password}")
+            print(f"self.timeout: {self.timeout}")
             self._netmiko_device = ConnectHandler(
                 device_type=device_type,
                 host=self.hostname,
